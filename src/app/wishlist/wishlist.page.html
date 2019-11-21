@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Wishlist</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let product of wishlistService.products">
+      <ion-item>
+        <h3>{{product.title}}</h3>
+        <span>${{product.price}}</span>
+        <p>{{product.description}}</p>
+      </ion-item>
+      <ion-item-options>
+        <ion-button (click)="deleteFromWishlist(product)" color="light">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

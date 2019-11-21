@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Product</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="launchWishlist()"
+        ><ion-icon slot="icon-only" name="heart"></ion-icon
+      ></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let product of productsService.products">
+    <ion-card-header>
+      <ion-card-title>{{ product.title }}</ion-card-title>
+      <ion-card-subtitle>{{ product.price }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>{{ product.description }}</ion-card-content>
+    <ion-button (click)="addToWishlist(product)" color="light">
+      <ion-icon slot="icon-only" name="heart"></ion-icon>
+    </ion-button>
+  </ion-card>
+</ion-content>

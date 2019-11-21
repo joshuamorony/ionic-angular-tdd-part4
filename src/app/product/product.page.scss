@@ -1,0 +1,18 @@
+ion-content {
+  --ion-background-color: #f9f9f9;
+}
+
+ion-card {
+  --ion-item-background: #fff;
+  position: relative;
+
+  ion-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  ion-card-subtitle {
+    color: #b1b1b1;
+  }
+}
